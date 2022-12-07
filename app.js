@@ -1,10 +1,12 @@
-var btn = document.getElementById("myBtn").addEventListener("click", displayDate);
+var btnTranslate = document.querySelector("#btn-translate");
 
 var txtInput = document.querySelector("#txt-input");
 
 console.log(txtInput);
 
-function displayDate() {
-    document.getElementById("demo").innerHTML = Date();
-  }
-  document.querySelector(".example").style.backgroundColor = "red";
+function clickHandler() {
+   console.log("clicked");
+   console.log("input" , txtInput.nodeValue)
+}
+
+btnTranslate.addEventListener("click", clickHandler);
