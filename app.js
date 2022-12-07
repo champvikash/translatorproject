@@ -1,10 +1,10 @@
-console.log("hello world");
+var btn = document.getElementById("myBtn").addEventListener("click", displayDate);
 
-// input
-var username = prompt("what is your name?");
+var txtInput = document.querySelector("#txt-input");
 
-//output
-var welcomeMessage =  ("this script is work welcome to Delhi " + username);
+console.log(txtInput);
 
-alert(welcomeMessage);
-
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+  }
+  document.querySelector(".example").style.backgroundColor = "red";
