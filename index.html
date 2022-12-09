@@ -6,6 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Translator</title>
+    <style>
+        textarea {
+            width: 80%;
+            height: 10%;
+            display: block;
+            margin: 1rem;
+            padding: 1rem;
+        }
+        btn-translate {
+              width: 10%;
+              left: 10%;
+        }
+
+        #output {
+            border: 1px solid black;
+            width: 80%;
+            height: 10vh;
+            display: block;
+            margin: 1rem;
+            padding: 1rem;
+        }
+       
+    </style>
+
 
 
 </head>
@@ -14,7 +38,11 @@
     <h1>talk banana</h1>
    
     <textarea id="txt-input" placeholder="hey this is my laptop" id="" cols="30" rows="10"></textarea>
-    <button id="btn-translate">Try it</button>
+    <button id="btn-translate">Translate</button>
+
+    <div style="font-size: larger;"> output come here </div>
+    <div id="output"></div>
+
 
     <p id="demo"></p>
 </body>

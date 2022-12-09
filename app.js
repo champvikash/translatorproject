@@ -1,12 +1,14 @@
 var btnTranslate = document.querySelector("#btn-translate");
-
 var txtInput = document.querySelector("#txt-input");
+var outputdev = document.querySelector("#output")
 
-console.log(txtInput);
+
 
 function clickHandler() {
-   console.log("clicked");
-   console.log("input" , txtInput.nodeValue)
+   outputdev.innerText = "akldcjsdj " + txtInput.value;
 }
 
 btnTranslate.addEventListener("click", clickHandler);
+
+
+
