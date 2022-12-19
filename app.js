@@ -1,33 +1,33 @@
 var btnTranslate = document.querySelector("#btn-translate");
 var txtInput = document.querySelector("#txt-input");
-var outputdev = document.querySelector("#output")
+var outputDiv = document.querySelector("#output");
 
 
-var sreverURL = "https://api.funtranslations.com/translate/minion.json"
 
-function getTranslateURL(text) {
-   return sreverURL + "?" + "text" + text;
+var serverURL = "https://api.funtranslations.com/translate/minion.json"
+
+
+function getTranslationURL(input) {
+    return serverURL + "?" + "text=" + input
 }
 
-
 function errorHandler(error) {
-   console.log("error occured", error);
-   alert("somthing wrong occured with the server! try again same time latter!");
+    console.log("error occured", error);
+    alert("something wrong with server! try again after some time")
 }
 
 
 function clickHandler() {
-   //outputdev.innerText = "akldcjsdj " + txtInput.value;
-   var inputText = txtInput.value;
+    var inputText = txtInput.value; // taking input
 
-   //calling server for processing
-   fetch(getTranslateURL(inputText))
-      .then(response => response.json())
-      .then(json => {
-         var translatedText = json.contents.translated;
-         outputDev.innerText = translatedText; // output
-      })
-      .catch(errorHandler)
-}
+    // calling server for processing
+    fetch(getTranslationURL(inputText))
+        .then(response => response.json())
+        .then(json => {
+            var translatedText = json.contents.translated;
+            outputDiv.innerText = translatedText; // output
+           })
+        .catch(errorHandler)
+};
 
-btnTranslate.addEventListener("click", clickHandler);
+btnTranslate.addEventListener("click", clickHandler)
